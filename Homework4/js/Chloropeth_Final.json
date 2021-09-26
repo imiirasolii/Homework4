@@ -1,12 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "Effect of Government Measures due to COVID-19 on the Number of Vehicle Incidents",
-        "fontSize": 20,
-        "subtitleFontSize": 16,
-        "subtitle": "Normalized Percentage Difference in Incidents between 2019 and 2020 Per Local Government Area",
-        "subtitleFontStyle": "italic",
-        "subtitleColor": "grey"
+        "text": "Normalized Percentage Difference in Vehicle Incidents between 2019 and 2020 Per Local Government Area",
+        "fontSize": 20
         },
     "width": 1200,
     "height": 800,
