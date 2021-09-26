@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Effect of Government Measures due to COVID-19 on the Number of Vehicle Incidents",
+        "fontSize": 20,
+        "subtitleFontSize": 16,
+        "subtitle": "Normalized Percentage Difference in Incidents between 2019 and 2020 Per Local Government Area",
+        "subtitleFontStyle": "italic",
+        "subtitleColor": "grey"
+        },
+    "width": 1200,
+    "height": 800,
+    "projection": {"type": "equirectangular"},
+    "data": {
+    "url": "https://raw.githubusercontent.com/imiirasolii/MapVisual/main/vic_lga.topojson",
+    "format": {"type": "topojson", "feature": "vic_lga"}
+    },
+    "transform": [
+    {
+    "lookup": "properties.ABB_NAME",
+    "from": {
+    "data": {
+    "url": "https://raw.githubusercontent.com/imiirasolii/MapVisual/main/Subset_of_data.csv"
+    },
+    "key": "ABB_NAME",
+    "fields": ["Percentage Difference"]
+    }
+    }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+"color": {
+    "field": "Percentage Difference",
+    "type": "quantitative",
+    "scale": {
+    "type": "threshold",
+    "domain": [-80,-60,-40,-20],
+    "domainMax": -100,
+    "domainMin": 0,
+    "range": ["#a50f15", "#de2d26", "#fb6a4a", "#fcae91","#fee5d9"]
+    }
+    },
+    "tooltip": [
+    {"field": "properties.ABB_NAME", "type": "nominal", "title": "LGA Name"},
+    {"field": "Percentage Difference", "type": "quantitative"}
+    ]
+    },
+    "config": {
+        "title": {
+        "anchor": "start"}
+}
+}
