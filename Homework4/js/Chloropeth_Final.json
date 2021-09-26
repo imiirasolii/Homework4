@@ -12,7 +12,7 @@
     "height": 800,
     "projection": {"type": "equirectangular"},
     "data": {
-    "url": "https://raw.githubusercontent.com/imiirasolii/MapVisual/main/vic_lga.topojson",
+    "url": "https://raw.githubusercontent.com/imiirasolii/Homework4/main/Homework4/js/vic_lga.topojson",
     "format": {"type": "topojson", "feature": "vic_lga"}
     },
     "transform": [
@@ -20,7 +20,7 @@
     "lookup": "properties.ABB_NAME",
     "from": {
     "data": {
-    "url": "https://raw.githubusercontent.com/imiirasolii/MapVisual/main/Subset_of_data.csv"
+    "url": "https://raw.githubusercontent.com/imiirasolii/Homework4/main/Homework4/data/Subset_of_data.csv"
     },
     "key": "ABB_NAME",
     "fields": ["Percentage Difference"]
